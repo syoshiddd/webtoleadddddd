@@ -6,8 +6,13 @@
     <title>お問い合わせフォーム</title>
 </head>
 <body>
+
     <h2>お問い合わせフォーム</h2>
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DIS000002EeXo" method="POST">
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+        <!-- ✅ Salesforceの組織ID（Org ID）を正しく指定 -->
+        <input type="hidden" name="oid" value="00DIS000002EeXo">
+
         <label for="last_name">姓</label>
         <input id="last_name" name="last_name" type="text" required><br>
 
@@ -22,5 +27,6 @@
 
         <button type="submit">送信</button>
     </form>
+
 </body>
 </html>
